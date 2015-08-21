@@ -158,34 +158,6 @@ string s = ss.str();
     if (!checkRPLIDARHealth(drv)) {
 //        goto on_finished;
     }
-/*	      //测试延时用
-//	Sleep(10000);		
-//	cout << "\a";
-//	cout << "响铃"<<endl;
-
-	GetLocalTime(&sys);
-	lastMinute = sys.wMinute;
-	lastSecond = sys.wSecond;
-	cout << "now:"<< lastSecond<<endl;
-	do
-	{
-		Sleep(1000);
-		GetLocalTime(&sys);		
-		cout << "new:"<<sys.wSecond<< endl;
-		if(sys.wMinute != lastMinute)
-		{
-			diff = sys.wSecond + 60 - lastSecond;
-		}
-		else
-		{
-			diff = sys.wSecond-lastSecond;
-		}
-	}
-	while(diff <= 10);
-
-	cout << "\a";
-	cout << "响铃again"<<endl;
-*/
 
     // start scan...
     drv->startScan();
@@ -228,19 +200,6 @@ string s = ss.str();
 					outfile.write((char*)&zero,sizeof(float));
 					outfile.write((char*)&zero,sizeof(float));
 				}
-
-/*				GetLocalTime(&sys); //当前时间
-				fout << sys.wYear<<sys.wMonth << sys.wDay << sys.wHour <<
-				sys.wMinute << sys.wSecond << sys.wMilliseconds << endl; //时间戳
-				for (int pos = 0; pos < (int)count ; ++pos) 
-				 {
-					fout <<" "<< pos;
-					fout << ((nodes[pos].sync_quality & RPLIDAR_RESP_MEASUREMENT_SYNCBIT) ?"S":" ")
-						<< ((nodes[pos].angle_q6_checkbit >> RPLIDAR_RESP_MEASUREMENT_ANGLE_SHIFT)/64.0f)<< " " 
-						<< ( nodes[pos].distance_q2/4.0f)<< " "
-						<< (nodes[pos].sync_quality >> RPLIDAR_RESP_MEASUREMENT_QUALITY_SHIFT) <<endl;
-				 }	
-*/
 			}
 			cout << "nowM:"<<sys.wMinute<<endl;
 

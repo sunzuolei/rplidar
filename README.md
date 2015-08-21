@@ -3,7 +3,7 @@ A driver solution to the RPlidar and obtain the data with using the driver
 
 ##sdk
 ------
-the sdk folder is the driver which support multiple platforms.
+the sdk folder is a cross-platform library.
 
 ##externRplidarClass
 --------------------
