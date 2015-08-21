@@ -1,9 +1,9 @@
 # rplidar
 A driver solution to the RPlidar and obtain the data with using the driver 
 
-##sdk
+##librplidar
 ------
-the sdk folder is a cross-platform library.
+the librplidar folder is a cross-platform library.
 
 ##externRplidarClass
 --------------------
